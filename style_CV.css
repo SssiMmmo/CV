@@ -1,0 +1,100 @@
+body {
+    background: radial-gradient(circle, antiquewhite, lightgray);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, lightgray, darkslategray);
+    border-radius: 2vh;
+}
+
+#container_of_header_photo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -25%;
+    border-radius: 2vw;
+    overflow: hidden;
+    width: 20.68%;
+    height: auto;
+}
+
+#container_of_header_description {
+    position: relative;
+    right:10vw;
+}
+
+#name {
+    position: relative;
+    font-size: 4em;
+}
+
+#position {
+    position: relative;
+    left: 3vw;
+    font-size: 2em;
+}
+
+#contact_information {
+    position: relative;
+    right: 1vw;
+    color: darkslategray;
+}
+
+.name_of_section {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding-left: 3vh;
+    color: white;
+}
+
+#aboutme {
+    background: radial-gradient(circle, whitesmoke, black);
+    border-radius: 2vh;
+    padding: 1%;
+}
+
+#summary, #employment, #education {
+    background: radial-gradient(circle, dimgray, darkslategray);
+    border-radius: 2vh;
+    color: white;
+    padding: 2vh;
+    margin: 2vh;
+}
+
+#last_position, #previous_position, #university, #qa_courses {
+    padding-block: 2vh;
+}
+
+/*nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}*/
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    background: radial-gradient(circle, darkslategray, black);
+    width: 20%;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+nav ul li a{
+    color: whitesmoke;
+}
