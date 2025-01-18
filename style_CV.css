@@ -1,11 +1,13 @@
 body {
-    background: radial-gradient(circle, antiquewhite, lightgray);
+    background: darkslategrey;
+    margin: 0;
+    padding: 0;
 }
 
-div {
+/*img {
     border: hotpink;
     border-style: dashed;
-}
+}*/
 
 a {
     text-decoration: none;
@@ -16,11 +18,18 @@ h3 {
     font-size: 1.3em;
 }
 
+h2 {
+    display: flex;
+    align-items: center;
+}
+
 header {
     display: flex;
     justify-content: center;
-    background: radial-gradient(circle, lightgray, darkslategray);
-    border-radius: 2vh;
+    background: linear-gradient(to top, whitesmoke, darkslategrey);
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    box-shadow: 0 0 2vh black;
 }
 
 #container_of_header_photo {
@@ -28,8 +37,6 @@ header {
     justify-content: center;
     position: relative;
     left: -25%;
-    border-radius: 2vw;
-    overflow: hidden;
     width: 20.68%;
     height: auto;
 }
@@ -37,6 +44,7 @@ header {
 #container_of_header_description {
     position: relative;
     right:10vw;
+    font-size: 1.1em;
 }
 
 #name {
@@ -51,30 +59,25 @@ header {
     font-size: 2em;
 }
 
-#contact_information {
-    position: relative;
-
-    color: darkslategray;
-}
-
 .name_of_section {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, whitesmoke, lightgray);
+    border-radius: 2vh;
+    height: 10vh;
+    margin: 1vw;
     font-size: 2em;
-    padding-left: 3vh;
-    color: white;
+    box-shadow: 0 0 2vh black;
 }
 
-#aboutme, #portfolio, #social_networks {
-    background: radial-gradient(circle, whitesmoke, black);
+#about_me, #portfolio, #social_networks{
     border-radius: 2vh;
     padding: 1%;
 }
 
 #summary, #employment, #education, #tech_documentation, #website, #team_challenge {
-    background: radial-gradient(circle, dimgray, darkslategray);
+    background: radial-gradient(circle, whitesmoke, lightgray);
     border-radius: 2vh;
-    color: white;
     padding: 2vh;
     margin: 2vh;
 }
@@ -99,36 +102,49 @@ nav ul {
 }
 
 nav ul li {
-    background: radial-gradient(circle, darkslategray, black);
+    background: radial-gradient(circle, whitesmoke, lightgray);
     width: 20%;
     border-radius: 2vh;
     text-align: center;
+    box-shadow: 0 0 2vh black;
 }
 
-nav ul li a{
-    color: whitesmoke;
-}
 
 #skills_languages {
     display: flex;
     justify-content: space-evenly;
 }
 
-#skills, #languages {
-    position: relative;
-    background: radial-gradient(circle, darkslategray, black);
-    border-radius: 2vh;
-    color: white;
+#name_skill, #name_lang {
+    width: 45vw;
 }
 
-#languages {
-    width: 19%;
+#list_of_languages, #list_of_skills {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 13.5vw;
+    background: radial-gradient(circle, whitesmoke, lightgray);
+    border-radius: 2vh;
+    width: 20vw;
+    height: 20vh;
 }
 
 #portfolio {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+}
+#portfolio a {
+    position: relative;
+    top: 2vh;
+    font-family: "JetBrains Mono SemiBold", cursive;
+}
+
+#tech_documentation img, #website img {
+    position: relative;
+    top: 5vh;
+    left: 1vw;
 }
 
 #social_networks a {
@@ -140,10 +156,19 @@ nav ul li a{
     display: flex;
     justify-content: space-evenly;
     height: 20vh;
+    position: relative;
+    bottom: 2vh;
+    border-radius: 2vh;
+    background: darkslategray;
+    margin: 2vw;
 }
 
 #github, #linkedin, #telegram {
     background: radial-gradient(circle, whitesmoke, lightgray);
+    border-radius: 2vh;
+    height: 15vh;
+    position: relative;
+    top: 2.5vh;
 }
 
 footer {
@@ -151,17 +176,41 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 2%;
-    background: darkslategray;
+    background: linear-gradient(to top, darkslategrey , whitesmoke);
+    border-top-left-radius: 2vh;
+    border-top-right-radius: 2vh;
+    box-shadow: 0 0 2vh black;
 }
 
-.container {
+#copyright {
     position: relative;
     left: 45vw;
-    color: white;
+    bottom: 1.5vh;
+    font-size: 1.2em;
 }
 
 .button_up {
     position: relative;
-    background: white;
-    right: 3%;
+    background: radial-gradient(circle, darkslategrey 40%, black);
+    right: 3vw;
+    bottom: 1.5vh;
+    padding: 1%;
+    border-radius: 2vh;
+    font-family: "JetBrains Mono SemiBold", cursive;
+}
+
+.button_up a {
+    color: whitesmoke;
+}
+
+#github a, #linkedin a, #telegram a {
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+}
+
+#github img, #linkedin img, #telegram img {
+    position: relative;
+    bottom: 2vh;
+    left: 7vw;
 }
