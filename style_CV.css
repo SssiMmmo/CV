@@ -269,7 +269,10 @@ nav ul li:hover  {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    body *:not(footer){
+        margin: 2%;
+    }
     header {
         flex-direction: column;
         align-items: center;
@@ -303,7 +306,8 @@ nav ul li:hover  {
     }
     #list_of_skills, #list_of_languages {
         width: 90%;
-        left: 5%;
+        height: auto;
+        left: 3%;
     }
     #list_of_languages:hover, #list_of_skills:hover {
         transform: translateY(5%) scale(1.05);
@@ -318,10 +322,11 @@ nav ul li:hover  {
     #social_links {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10%;
     }
     #github, #linkedin, #telegram {
         width: 100%;
-        margin: 3%;
+        margin: 1%;
     }
     #github:hover, #linkedin:hover, #telegram:hover {
     transform: scale(1.05);
@@ -330,9 +335,13 @@ nav ul li:hover  {
     #github a, #linkedin a, #telegram a {
         position: relative;
         left: 40%;
+        font-size: 2em;
     }
     footer {
         margin-top: 50%;
+    }
+    footer div{
+        text-align-last: center;
     }
     #copyright {
         left: 35%;
@@ -341,6 +350,9 @@ nav ul li:hover  {
     .button_up {
         bottom: 0;
         border-radius: 0.5vh;
+    }
+    h2 {
+        font-size: 1.05em;
     }
 
 }
