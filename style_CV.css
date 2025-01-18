@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-/*img {
+/*div,section {
     border: hotpink;
     border-style: dashed;
 }*/
@@ -62,12 +62,13 @@ header {
 .name_of_section {
     display: flex;
     justify-content: center;
-    background: radial-gradient(circle, whitesmoke, lightgray);
+    background: radial-gradient(circle, darkslategrey, darkgray);
     border-radius: 2vh;
     height: 10vh;
     margin: 1vw;
     font-size: 2em;
     box-shadow: 0 0 2vh black;
+    color: whitesmoke;
 }
 
 #about_me, #portfolio, #social_networks{
@@ -107,8 +108,8 @@ nav ul li {
     border-radius: 2vh;
     text-align: center;
     box-shadow: 0 0 2vh black;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
 
 #skills_languages {
     display: flex;
@@ -128,17 +129,27 @@ nav ul li {
     border-radius: 2vh;
     width: 20vw;
     height: 20vh;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #portfolio {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    position: static;
 }
 #portfolio a {
     position: relative;
     top: 2vh;
     font-family: "JetBrains Mono SemiBold", cursive;
+}
+
+#portfolio img {
+    animation: link_rotation 5s ease-in-out infinite;
+}
+
+#tech_documentation, #website, #team_challenge {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s, font-size 0.3s;
 }
 
 #tech_documentation img, #website img {
@@ -158,8 +169,6 @@ nav ul li {
     height: 20vh;
     position: relative;
     bottom: 2vh;
-    border-radius: 2vh;
-    background: darkslategray;
     margin: 2vw;
 }
 
@@ -169,6 +178,7 @@ nav ul li {
     height: 15vh;
     position: relative;
     top: 2.5vh;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
 footer {
@@ -192,25 +202,67 @@ footer {
 .button_up {
     position: relative;
     background: radial-gradient(circle, darkslategrey 40%, black);
+    box-shadow: 0 0 2vh whitesmoke;
     right: 3vw;
     bottom: 1.5vh;
     padding: 1%;
     border-radius: 2vh;
     font-family: "JetBrains Mono SemiBold", cursive;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .button_up a {
     color: whitesmoke;
+    transition: color 0.5s;
 }
 
 #github a, #linkedin a, #telegram a {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 20vw;
 }
 
-#github img, #linkedin img, #telegram img {
-    position: relative;
-    bottom: 2vh;
-    left: 7vw;
+#github:hover, #linkedin:hover, #telegram:hover {
+    transform: translateY(15%) scale(1.1);
+    box-shadow: 0 0 2vh black;
+}
+
+.button_up:hover {
+    background: radial-gradient(circle, whitesmoke, lightgray);
+    box-shadow: 0 0 2vh 1vh black;
+}
+
+.button_up:hover a {
+    color: black;
+}
+
+nav ul li:hover  {
+    transform: translateY(15%) scale(1.1);
+    box-shadow: 0 0 2vh 0.5vh black;
+}
+
+#tech_documentation:hover, #website:hover, #team_challenge:hover {
+    box-shadow: 0 0 20px black;
+    transform: scale(1.03);
+}
+
+#container_of_header_description a:hover {
+    text-decoration: black;
+    text-decoration-line: underline;
+    text-decoration-thickness: 10%;
+}
+
+#list_of_languages:hover, #list_of_skills:hover {
+    transform: translateY(5%) scale(1.2);
+    box-shadow: 0 0 2vh black;
+}
+
+@keyframes link_rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
