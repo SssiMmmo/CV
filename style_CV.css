@@ -1,7 +1,8 @@
 body {
-    background: darkslategrey;
+    background: #637575;
     margin: 0;
     padding: 0;
+    font-family: "Times New Roman", serif;
 }
 
 /*div,section {
@@ -26,7 +27,7 @@ h2 {
 header {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to top, whitesmoke, darkslategrey);
+    background: linear-gradient(to top, whitesmoke, darkslategray);
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
     box-shadow: 0 0 2vh black;
@@ -62,7 +63,7 @@ header {
 .name_of_section {
     display: flex;
     justify-content: center;
-    background: radial-gradient(circle, darkslategrey, darkgray);
+    background: radial-gradient(circle, darkslategray, darkgray);
     border-radius: 2vh;
     height: 10vh;
     margin: 1vw;
@@ -117,6 +118,7 @@ nav ul li {
 }
 
 #name_skill, #name_lang {
+    position: relative;
     width: 45vw;
 }
 
@@ -186,7 +188,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 2%;
-    background: linear-gradient(to top, darkslategrey , whitesmoke);
+    background: linear-gradient(to top, darkslategray , whitesmoke);
     border-top-left-radius: 2vh;
     border-top-right-radius: 2vh;
     box-shadow: 0 0 2vh black;
@@ -201,7 +203,7 @@ footer {
 
 .button_up {
     position: relative;
-    background: radial-gradient(circle, darkslategrey 40%, black);
+    background: radial-gradient(circle, darkslategray 40%, black);
     box-shadow: 0 0 2vh whitesmoke;
     right: 3vw;
     bottom: 1.5vh;
@@ -265,4 +267,80 @@ nav ul li:hover  {
     to {
         transform: rotateY(360deg);
     }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #container_of_header_photo {
+        width: 40%;
+        left: 0;
+    }
+    #container_of_header_description {
+        flex-direction: column;
+        right: 1%;
+        text-align: center;
+    }
+    nav {
+        position: relative;
+        right: 3%;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        width: 80%;
+        margin: 3%;
+        position: relative;
+        left: 10%;
+    }
+    #skills_languages {
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+    #list_of_skills, #list_of_languages {
+        width: 90%;
+        left: 5%;
+    }
+    #list_of_languages:hover, #list_of_skills:hover {
+        transform: translateY(5%) scale(1.05);
+        box-shadow: 0 0 2vh black;
+        z-index: 1000;
+    }
+    #name_skill, #name_lang {
+        margin: 5%;
+        width: 95%;
+        right: 2%;
+    }
+    #social_links {
+        flex-direction: column;
+        align-items: center;
+    }
+    #github, #linkedin, #telegram {
+        width: 100%;
+        margin: 3%;
+    }
+    #github:hover, #linkedin:hover, #telegram:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2vh black;
+    }
+    #github a, #linkedin a, #telegram a {
+        position: relative;
+        left: 40%;
+    }
+    footer {
+        margin-top: 50%;
+    }
+    #copyright {
+        left: 35%;
+        bottom: 0;
+    }
+    .button_up {
+        bottom: 0;
+        border-radius: 0.5vh;
+    }
+
 }
