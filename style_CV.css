@@ -84,7 +84,7 @@ header {
     margin: 2vh;
 }
 
-#last_position, #previous_position, #university, #qa_courses {
+#last_position, #previous_position, #university, #qa_courses, #qa_courses_sql {
     padding-block: 2vh;
 }
 
@@ -130,7 +130,7 @@ nav ul li {
     background: radial-gradient(circle, whitesmoke, lightgray);
     border-radius: 2vh;
     width: 20vw;
-    height: 20vh;
+    height: 23vh;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
