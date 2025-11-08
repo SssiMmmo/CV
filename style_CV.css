@@ -130,7 +130,7 @@ nav ul li {
     background: radial-gradient(circle, whitesmoke, lightgray);
     border-radius: 2vh;
     width: 20vw;
-    height: 23vh;
+    height: 30vh;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -164,15 +164,49 @@ nav ul li {
     color: black;
     font-size: 3em;
 }
-
 #social_links {
     display: flex;
     justify-content: space-evenly;
-    height: 20vh;
-    position: relative;
-    bottom: 2vh;
-    margin: 2vw;
+    align-items: center;
+    flex-wrap: wrap;              /* чтобы адаптировалось под экран */
+    gap: 2vw;                     /* расстояние между карточками */
+    margin: 4vh 2vw;
 }
+
+#social_links div {
+    background: linear-gradient(145deg, #f1f1f1, #dcdcdc);
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;                /* ключевой момент */
+    align-items: center;          /* выравнивает текст и иконку по центру */
+    justify-content: space-between;
+    min-width: 220px;             /* одинаковая ширина */
+}
+
+#social_links div:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#social_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 2.4rem;
+    font-family: "Times New Roman", serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#social_links img {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px; /* расстояние между текстом и иконкой */
+}
+
 
 #github, #linkedin, #telegram {
     background: radial-gradient(circle, whitesmoke, lightgray);
