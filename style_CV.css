@@ -3,20 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Times New Roman", serif;
+    box-sizing: border-box;
 }
-
-/*div,section {
-    border: hotpink;
-    border-style: dashed;
-}*/
 
 a {
     text-decoration: none;
     color: black;
-}
-
-h3 {
-    font-size: 1.3em;
 }
 
 h2 {
@@ -24,55 +16,63 @@ h2 {
     align-items: center;
 }
 
+h3 {
+    font-size: 1.3em;
+}
+
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: linear-gradient(to top, whitesmoke, darkslategray);
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
     box-shadow: 0 0 2vh black;
+    padding: 2vh 0;
 }
 
 #container_of_header_photo {
     display: flex;
     justify-content: center;
-    position: relative;
-    left: -25%;
-    width: 20.68%;
+    width: 20%;
+}
+
+#profile_photo {
+    width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 
 #container_of_header_description {
-    position: relative;
-    right:10vw;
     font-size: 1.1em;
+    margin-left: 2vw;
 }
 
 #name {
-    position: relative;
     font-size: 4em;
-    left: 1vw;
 }
 
 #position {
-    position: relative;
-    left: 4vw;
     font-size: 2em;
 }
 
 .name_of_section {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: radial-gradient(circle, darkslategray, darkgray);
     border-radius: 2vh;
-    height: 10vh;
+    height: auto;
+    padding: 0.1vh 3vw;
     margin: 1vw;
     font-size: 2em;
     box-shadow: 0 0 2vh black;
     color: whitesmoke;
+    text-align: center;
+    min-width: 150px;
 }
 
-#about_me, #portfolio, #social_networks{
+#about_me, #portfolio, #social_networks {
     border-radius: 2vh;
     padding: 1%;
 }
@@ -81,25 +81,14 @@ header {
     background: radial-gradient(circle, whitesmoke, lightgray);
     border-radius: 2vh;
     padding: 2vh;
-    margin: 2vh;
+    margin: 2vh 0;
 }
-
-#last_position, #previous_position, #university, #qa_courses, #qa_courses_sql {
-    padding-block: 2vh;
-}
-
-/*nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-}*/
 
 nav ul {
     display: flex;
     justify-content: space-around;
     font-size: 2em;
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -112,64 +101,58 @@ nav ul li {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+nav ul li:hover {
+    transform: translateY(15%) scale(1.1);
+    box-shadow: 0 0 2vh 0.5vh black;
+}
+
 #skills_languages {
     display: flex;
     justify-content: space-evenly;
+    gap: 2vw;
 }
 
 #name_skill, #name_lang {
-    position: relative;
-    width: 45vw;
+    width: 45%;
 }
 
 #list_of_languages, #list_of_skills {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 13.5vw;
     background: radial-gradient(circle, whitesmoke, lightgray);
     border-radius: 2vh;
     width: 20vw;
     height: 30vh;
+    padding: 1vh;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#list_of_languages:hover, #list_of_skills:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 2vh black;
 }
 
 #portfolio {
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    position: static;
-}
-#portfolio a {
-    position: relative;
-    top: 2vh;
-    font-family: "JetBrains Mono SemiBold", cursive;
+    gap: 2vh;
 }
 
 #portfolio img {
     animation: link_rotation 5s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
-#tech_documentation, #website, #team_challenge {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s, font-size 0.3s;
-}
-
-#tech_documentation img, #website img {
-    position: relative;
-    top: 5vh;
-    left: 1vw;
-}
-
-#social_networks a {
-    color: black;
-    font-size: 3em;
-}
 #social_links {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;              /* чтобы адаптировалось под экран */
-    gap: 2vw;                     /* расстояние между карточками */
+    flex-wrap: wrap;
+    gap: 2vw;
     margin: 4vh 2vw;
 }
 
@@ -178,11 +161,11 @@ nav ul li {
     padding: 15px 25px;
     border-radius: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;                /* ключевой момент */
-    align-items: center;          /* выравнивает текст и иконку по центру */
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    min-width: 220px;             /* одинаковая ширина */
+    min-width: 220px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #social_links div:hover {
@@ -190,78 +173,30 @@ nav ul li {
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-#social_links a {
-    text-decoration: none;
-    color: black;
-    font-size: 2.4rem;
-    font-family: "Times New Roman", serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
 #social_links img {
     width: 80px;
     height: 80px;
-    margin-left: 10px; /* расстояние между текстом и иконкой */
-}
-
-
-#github, #linkedin, #telegram {
-    background: radial-gradient(circle, whitesmoke, lightgray);
-    border-radius: 2vh;
-    height: 15vh;
-    position: relative;
-    top: 2.5vh;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    margin-left: 10px;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2%;
-    background: linear-gradient(to top, darkslategray , whitesmoke);
+    padding: 2% 2%;
+    background: linear-gradient(to top, darkslategray, whitesmoke);
     border-top-left-radius: 2vh;
     border-top-right-radius: 2vh;
     box-shadow: 0 0 2vh black;
 }
 
-#copyright {
-    position: relative;
-    left: 45vw;
-    bottom: 1.5vh;
-    font-size: 1.2em;
-}
-
 .button_up {
-    position: relative;
     background: radial-gradient(circle, darkslategray 40%, black);
     box-shadow: 0 0 2vh whitesmoke;
-    right: 3vw;
-    bottom: 1.5vh;
     padding: 1%;
     border-radius: 2vh;
     font-family: "JetBrains Mono SemiBold", cursive;
     transition: background 0.3s, box-shadow 0.3s;
-}
-
-.button_up a {
-    color: whitesmoke;
-    transition: color 0.5s;
-}
-
-#github a, #linkedin a, #telegram a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-}
-
-#github:hover, #linkedin:hover, #telegram:hover {
-    transform: translateY(15%) scale(1.1);
-    box-shadow: 0 0 2vh black;
 }
 
 .button_up:hover {
@@ -269,124 +204,116 @@ footer {
     box-shadow: 0 0 2vh 1vh black;
 }
 
+.button_up a {
+    color: whitesmoke;
+    transition: color 0.5s;
+}
+
 .button_up:hover a {
     color: black;
 }
 
-nav ul li:hover  {
-    transform: translateY(15%) scale(1.1);
-    box-shadow: 0 0 2vh 0.5vh black;
-}
-
-#tech_documentation:hover, #website:hover, #team_challenge:hover {
-    box-shadow: 0 0 20px black;
-    transform: scale(1.03);
-}
-
-#container_of_header_description a:hover {
-    text-decoration: black;
-    text-decoration-line: underline;
-    text-decoration-thickness: 10%;
-}
-
-#list_of_languages:hover, #list_of_skills:hover {
-    transform: translateY(5%) scale(1.2);
-    box-shadow: 0 0 2vh black;
-}
-
 @keyframes link_rotation {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
-@media (max-width: 1200px) {
-    body *:not(footer){
-        margin: 2%;
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
     }
+
     header {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-    }
-    #container_of_header_photo {
-        width: 40%;
-        left: 0;
-    }
-    #container_of_header_description {
-        flex-direction: column;
-        right: 1%;
         text-align: center;
-    }
-    nav {
-        position: relative;
-        right: 3%;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        width: 80%;
-        margin: 3%;
-        position: relative;
-        left: 10%;
-    }
-    #skills_languages {
-        flex-direction: column;
-        margin-bottom: 5%;
-    }
-    #list_of_skills, #list_of_languages {
-        width: 90%;
-        height: auto;
-        left: 3%;
-    }
-    #list_of_languages:hover, #list_of_skills:hover {
-        transform: translateY(5%) scale(1.05);
-        box-shadow: 0 0 2vh black;
-        z-index: 1000;
-    }
-    #name_skill, #name_lang {
-        margin: 5%;
-        width: 95%;
-        right: 2%;
-    }
-    #social_links {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10%;
-    }
-    #github, #linkedin, #telegram {
-        width: 100%;
-        margin: 1%;
-    }
-    #github:hover, #linkedin:hover, #telegram:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 2vh black;
-    }
-    #github a, #linkedin a, #telegram a {
-        position: relative;
-        left: 40%;
-        font-size: 2em;
-    }
-    footer {
-        margin-top: 50%;
-    }
-    footer div{
-        text-align-last: center;
-    }
-    #copyright {
-        left: 35%;
-        bottom: 0;
-    }
-    .button_up {
-        bottom: 0;
-        border-radius: 0.5vh;
-    }
-    h2 {
-        font-size: 1.05em;
+        padding: 3vh 0;
     }
 
+    #container_of_header_photo {
+        width: 70%;
+    }
+
+    #container_of_header_description {
+        margin-top: 2vh;
+    }
+
+    #name {
+        font-size: 2.2em;
+    }
+
+    #position {
+        font-size: 1.3em;
+    }
+
+    #contact_information {
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    nav ul li {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    #skills_languages {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    #name_skill, #name_lang {
+        width: 100%;
+    }
+
+    #list_of_skills, #list_of_languages {
+        width: 100%;
+        height: auto;
+        padding: 3vh;
+    }
+
+    #portfolio img {
+        margin: 2vh auto 0;
+        display: block;
+        max-width: 100%;
+    }
+
+    #social_links {
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    #social_links div {
+        width: 100%;
+        min-width: unset;
+    }
+
+    #social_links img {
+        width: 45px;
+        height: 45px;
+    }
+
+    #social_links a {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2vh;
+        padding: 3vh 0;
+    }
+
+    .button_up {
+        padding: 3%;
+    }
+
+    .name_of_section {
+        font-size: 1.4em;
+        padding: 2vh 3vw;
+    }
 }
