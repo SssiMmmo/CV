@@ -110,11 +110,12 @@ nav ul li:hover {
 #skills_languages {
     display: flex;
     justify-content: space-evenly;
-    gap: 2vw;
+    gap: 3vw;
 }
 
 #name_skill, #name_lang {
     width: 45%;
+    height: 30%;
 }
 
 #list_of_languages, #list_of_skills {
@@ -130,7 +131,7 @@ nav ul li:hover {
 }
 
 #list_of_languages:hover, #list_of_skills:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 2vh black;
 }
 
